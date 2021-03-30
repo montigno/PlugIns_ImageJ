@@ -6,7 +6,7 @@
 # How to install this plugin?
 
 	- download the PlugIn, unzip it and copy the 'Atlas_Irmage' folder to the ImageJ/plugins folder.
-	- start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open.
+	- start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open).
 
 # How to use it?
 
@@ -15,6 +15,7 @@
 	- select the labels text in 'Labels Text'
 	- select the labels image (among the open images) in 'Labels Image'.
 	- click on 'start' button.
+	- a 'Synchronize Windows' box appears, click on 'Synchronize All'
 	- click on a region of Labels image.
 	
 # Release history
