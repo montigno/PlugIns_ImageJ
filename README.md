@@ -2,29 +2,15 @@
 [![](https://img.shields.io/badge/platform-Linux%2C%20OSX%2C%20Windows-orange.svg)](#)
 [![](https://img.shields.io/badge/works%20with-ImageJ-1abc9c.svg)](https://imagej.nih.gov/ij/)
 
-# PlugIns_ImageJ
+The 'source' branch contains the source codes of Atlas_Irmage.
 
-Atlas_Irmage is an image segmentation viewer.
-It is mainly used for the comparison of acquisition images with those of atlases.
-	
-# How to install this plugin?
+The directories 'AtlasIrmage_' and 'IJ' are ready to be used in the 'Eclipse' editor.
 
-- download the PlugIn [here](https://github.com/montigno/PlugIns_ImageJ/archive/refs/heads/main.zip)
-- unzip it and copy the 'Atlas_Irmage' folder to the ImageJ/plugins folder.
-- start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open).
+# License
 
-# How to use it?
-
-- first, open your images (otherwise a 'No image' message appears)
-- go to the menu PlugIns/Atlas_Irmage/AtlasIrmage, a window appears.
-- select the labels text in 'Labels Text'
-- select the labels image (among the open images) in 'Labels Image'.
-- click on 'start' button.
-- a 'Synchronize Windows' box appears, click on 'Synchronize All'
-- click on a region of Labels image.
+Atlas_Irmage is open source and is released under the [CeCILL-b software license](https://cecill.info/licences/Licence_CeCILL_V2.1-en.html).
 
 # Release history
 
-    30/03/2021 : version 1.0
-	First repository
-
+	31/03/2021 : Version 1.0
+	- 1st repository
