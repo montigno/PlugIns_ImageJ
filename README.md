@@ -9,7 +9,7 @@
 	
 # How to install this plugin?
 
-	- download the PlugIn here [here](https://github.com/montigno/PlugIns_ImageJ/archives/refs/heads/main.zip)
+	- download the PlugIn [here](https://github.com/montigno/PlugIns_ImageJ/archive/refs/heads/main.zip)
 	- unzip it and copy the 'Atlas_Irmage' folder to the ImageJ/plugins folder.
 	- start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open).
 
