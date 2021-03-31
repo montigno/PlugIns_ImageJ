@@ -1,6 +1,6 @@
 [![](https://img.shields.io/badge/java-8-yellow.svg)](https://www.java.com/fr/download/)
-[![](https://img.shields.io/badge/platform-Linux%2C%20OSX%2C%20Windows%2C%20OSX%2C%20MacOS-orange.svg)](#)
-[![](https://img.shields.io/badge/PlugIn%20for%20ImageJ)](https://imagej.nih.gov/ij/)
+[![](https://img.shields.io/badge/platform-Linux%2C%20OSX%2C%20Windows-orange.svg)](#)
+[![](https://img.shields.io/badge/works-with-ImageJ)](https://imagej.nih.gov/ij/)
 
 # PlugIns_ImageJ
 
