@@ -7,7 +7,7 @@
 Atlas_Irmage is an image segmentation viewer.
 It is mainly used for the comparison of acquisition images with those of atlases.
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/montigno/PlugIns_ImageJ/blob/devpt/Screenshot.jpg" width="600">
 </p>
 	
