@@ -15,7 +15,7 @@ Atlas_Irmage plugin is an image segmentation viewer.
 It is mainly used for the comparison of acquisition images with those of atlases.
 
 <p align="left">
-<img src="https://github.com/montigno/PlugIns_ImageJ/blob/devpt/Screenshot_Atlas.jpg" width="600">
+<img src="https://github.com/montigno/PlugIns_ImageJ/blob/main/Screenshot_Atlas.jpg" width="600">
 </p>
 
 # How to use Atlas_Irmage?
@@ -34,7 +34,7 @@ It is mainly used for the comparison of acquisition images with those of atlases
 CEST_IRM allows to trace the CEST Z-spectrum and Asymmetry profiles.
 
 <p align="left">
-<img src="https://github.com/montigno/PlugIns_ImageJ/blob/devpt/Screenshot_CEST.jpg" width="600">
+<img src="https://github.com/montigno/PlugIns_ImageJ/blob/main/Screenshot_CEST.jpg" width="600">
 </p>
 
 # How to use CEST_IRM?
