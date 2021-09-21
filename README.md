@@ -41,7 +41,9 @@ CEST_IRM allows to trace the CEST Z-spectrum and Asymmetry profiles.
 
  - first, open your image
  - go to the menu PlugIns/CEST_IRM/CEST_IRM
- - if the plugin doesn't find the frequency range (json file missing), a dialog window appears.
+ - if the pluging doesn't find the frequency range (json file missing), a dialog window appears:
+      - enter the frequency range : min max step (do not forget the white spaces)
+      - click on ok
  - draw a ROI on your image (rectangle, oval, polygone or freehand), the profils appear on the graph
  - if you move or resize your ROI, the graph updates
 
