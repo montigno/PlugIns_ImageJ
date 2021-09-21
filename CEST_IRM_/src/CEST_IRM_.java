@@ -4,10 +4,11 @@ import java.awt.event.MouseListener;
 import java.io.File;
 import java.io.FileReader;
 
+import javax.swing.JOptionPane;
+
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-
-import javax.swing.JFrame;
 
 import ij.IJ;
 import ij.ImagePlus;
@@ -17,13 +18,10 @@ import ij.gui.PlotWindow;
 import ij.gui.Roi;
 import ij.plugin.PlugIn;
 
-public class CEST_IRM_ extends JFrame implements PlugIn {
+public class CEST_IRM_ implements PlugIn {
 
-	private static final long serialVersionUID = 1L;
-	
 	private JSONParser parser = new JSONParser();
 	private Object obj;
-//	static String[] img;
 	Plot p, update;
 	static PlotWindow pw;
 	ImagePlus imp;
@@ -31,7 +29,6 @@ public class CEST_IRM_ extends JFrame implements PlugIn {
 
 	@Override
 	public void run(String arg) {
-//		IJ.log(arg);
 		if (WindowManager.getImageTitles().length == 0) {
 			IJ.showMessage("No images");
 			return;
@@ -41,28 +38,33 @@ public class CEST_IRM_ extends JFrame implements PlugIn {
 
 	public void main() {
 
-//		img = WindowManager.getImageTitles();
 		imp = WindowManager.getCurrentImage();
 		
 		String current_json = IJ.getDirectory("image") + imp.getTitle();
 		current_json = current_json.replace(".nii", ".json");
+		String tmp;
 		
 		if (new File(current_json).exists()) {
 			try {
 				obj = parser.parse(new FileReader(current_json));
 				JSONObject object = (JSONObject) obj;
 				JSONObject under_object = (JSONObject) object.get("SatTransFreqRanges");
-				String tmp = under_object.get("value").toString();
+				tmp = under_object.get("value").toString();
 				tmp = tmp.replace("[", "");
 				tmp = tmp.replace("]", "");
-				for (int i=0; i <= 3; i++)
+				for (int i=0; i < 3; i++)
 					range[i] = Float.parseFloat(tmp.split(",")[i].toString());
 				
 			} catch (Exception e) {
-				
+				IJ.log(e.toString());
 			}
 //			IJ.log(current_json);
 			
+		}
+		else {
+			tmp = JOptionPane.showInputDialog(null, "Enter the frequency Range (min max step)", "-10.0 10.0 0.1");
+			for (int i=0; i < 3; i++)
+				range[i] = Float.parseFloat(tmp.split(" +")[i]);
 		}
 		
 		p = new Plot("CEST-IRM", "Chemical Shift (ppm)", "");
@@ -131,4 +133,5 @@ public class CEST_IRM_ extends JFrame implements PlugIn {
 		pw.drawPlot(update);
 
 	}
+
 }

@@ -12,5 +12,8 @@ The plugins are  open source and are released under the [CeCILL-b software licen
 
 # Release history
 
+	21/09/2021 : Version 1.1
+	- source update
+
 	31/03/2021 : Version 1.0
 	- 1st repository
