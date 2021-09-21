@@ -25,7 +25,7 @@ public class CEST_IRM_ implements PlugIn {
 	Plot p, update;
 	static PlotWindow pw;
 	ImagePlus imp;
-	float range[] = new float[] {-10f,10f,0.2f};
+	float range[] = new float[3];
 
 	@Override
 	public void run(String arg) {
@@ -42,7 +42,7 @@ public class CEST_IRM_ implements PlugIn {
 		
 		String current_json = IJ.getDirectory("image") + imp.getTitle();
 		current_json = current_json.replace(".nii", ".json");
-		String tmp;
+		String tmp = "-10.0 10.0 0.1";
 		
 		if (new File(current_json).exists()) {
 			try {
@@ -52,20 +52,19 @@ public class CEST_IRM_ implements PlugIn {
 				tmp = under_object.get("value").toString();
 				tmp = tmp.replace("[", "");
 				tmp = tmp.replace("]", "");
-				for (int i=0; i < 3; i++)
-					range[i] = Float.parseFloat(tmp.split(",")[i].toString());
+				tmp = tmp.replace(",", " ");
 				
 			} catch (Exception e) {
-				IJ.log(e.toString());
+				tmp = getFreqRange();
 			}
 //			IJ.log(current_json);
 			
 		}
-		else {
-			tmp = JOptionPane.showInputDialog(null, "Enter the frequency Range (min max step)", "-10.0 10.0 0.1");
-			for (int i=0; i < 3; i++)
-				range[i] = Float.parseFloat(tmp.split(" +")[i]);
-		}
+		else
+			tmp = getFreqRange();
+		
+		for (int i=0; i < 3; i++)
+			range[i] = Float.parseFloat(tmp.split(" +")[i]);
 		
 		p = new Plot("CEST-IRM", "Chemical Shift (ppm)", "");
 //		p.setLimits(-5, 5, 0, 110);
@@ -133,5 +132,8 @@ public class CEST_IRM_ implements PlugIn {
 		pw.drawPlot(update);
 
 	}
-
+	
+	public String getFreqRange() {
+		return JOptionPane.showInputDialog(null, "Enter the frequency Range (min max step)", "-10.0 10.0 0.1");
+	}
 }
