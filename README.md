@@ -46,6 +46,9 @@ CEST_IRM allows to trace the CEST Z-spectrum and Asymmetry profiles.
 
 # Release history
 
+    21/09/2021 : version 1.1
+	CEST_IRM : new dialog box to enter the frequency range
+
     30/03/2021 : version 1.0
 	First repository
 
