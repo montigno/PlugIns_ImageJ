@@ -28,6 +28,11 @@ It is mainly used for the comparison of acquisition images with those of atlases
 - a 'Synchronize Windows' box appears, click on 'Synchronize All'
 - click on a region of Labels image.
 
+# pCasl for Bruker Paravision
+
+<p align="left">
+<img src="https://github.com/montigno/PlugIns_ImageJ/blob/main/Screenshot_pCasl.jpg" width="600">
+</p>
 
 # CEST_IRM
 
@@ -48,6 +53,9 @@ CEST_IRM allows to trace the CEST Z-spectrum and Asymmetry profiles.
  - if you move or resize your ROI, the graph updates
 
 # Release history
+
+    11/09/2025 : version 1.2
+	pCasl : first repository. Compatible with PV7.0, PV360
 
     21/09/2021 : version 1.1
 	CEST_IRM : new dialog box to enter the frequency range
