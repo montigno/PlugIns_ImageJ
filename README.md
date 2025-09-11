@@ -54,6 +54,9 @@ CEST_IRM allows to trace the CEST Z-spectrum and Asymmetry profiles.
 
 # Release history
 
+    11/09/2025 : version 1.3
+        pCasl : bug with moving average fixed
+
     11/09/2025 : version 1.2
 	pCasl : first repository. Compatible with PV7.0, PV360
 

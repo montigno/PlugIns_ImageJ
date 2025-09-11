@@ -35,7 +35,7 @@ public class Pcaslp extends AbstractAction implements KeyListener{
 	private static final long serialVersionUID = 1L;
 	private PcaslBruker_ wind;
 	private double[] x,y;
-	private double[] xoff,yoff;
+	private double[] xoff,yoff, yoff_av;
 	private ImagePlus imp;
 	private String format;
 	private ImageCanvas canvas;
@@ -102,6 +102,7 @@ public class Pcaslp extends AbstractAction implements KeyListener{
 		}
 		y = new double[x.length];
 		yoff = new double[x.length-1];
+		yoff_av = new double[x.length-1];
 		xoff = new double[x.length-1];
 
 		plotCurve = new Plot("Plot", "Phase", "Relative perfusion");
@@ -164,19 +165,19 @@ public class Pcaslp extends AbstractAction implements KeyListener{
 			yoff[a]=y[a+1];
 		}
 		
-		
+		MovingAverage mv = new MovingAverage(this.yoff, 5);
+		yoff_av = mv.getAvMo();
 		plotCurve.setColor(colors[s]);
 		plotCurve.setLineWidth(1);
-		plotCurve.addPoints(xoff, yoff,Plot.LINE);
-		plotCurve.addPoints(xoff, yoff,Plot.X);
+		plotCurve.addPoints(xoff, yoff, 5);
+		plotCurve.addPoints(xoff, yoff_av, 2);
 		plotCurve.addLabel(0, 0, space+"Plot"+(s+1));
 		space=space+"            ";
-		
-		
 		IJ.log("\nPlot"+(s+1)+" : ");
 		IJ.log("Signal max ="+ymax+"\n"+"Signal min ="+ymin);
 		IJ.log("Phase of max ="+xmax+"\n"+"Phase of min ="+xmin);
-		
+	    IJ.log("Signal max moving average =" + mv.getMaxMin()[0][1] + " : " + "Signal min moving average =" + mv.getMaxMin()[1][1]);
+	    IJ.log("Phase of max moving average=" + xoff[(int)mv.getMaxMin()[0][0]] + " : " + "Phase of min =" + xoff[(int)mv.getMaxMin()[1][0]]);		
 		}				
 		
 		if (pwin==null) {
