@@ -6,7 +6,7 @@
 # How to install plugins?
 
 - download the PlugIns [here](https://github.com/montigno/PlugIns_ImageJ/archive/refs/heads/main.zip)
-- unzip it and copy the folders to the ImageJ/plugins folder.
+- unzip it and copy the folders of your choice into the ImageJ/plugins folder.
 - start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open).
 
 # Atlas_Irmage
