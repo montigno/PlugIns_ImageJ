@@ -7,9 +7,9 @@
 
 - download all the PlugIns [here](https://github.com/montigno/PlugIns_ImageJ/archive/refs/heads/main.zip)
 - Or choose a PlugIn from the list:
-[Atlas_Irmage](https://github.com/montigno/PlugIns_ImageJ/Atlas_Irmage/)
-[CEST_IRM](https://github.com/montigno/PlugIns_ImageJ/CEST_IRM/)
-[pCaslBruker-java8_](https://github.com/montigno/PlugIns_ImageJ/pCaslBruker-java8_)
+[Atlas_Irmage](https://github.com/montigno/PlugIns_ImageJ/tree/6e3be3164bd277a24f35d79514d81cfc9ced057b/Atlas_Irmage)
+[CEST_IRM](https://github.com/montigno/PlugIns_ImageJ/tree/6e3be3164bd277a24f35d79514d81cfc9ced057b/CEST_IRM)
+[pCaslBruker-java8_](https://github.com/montigno/PlugIns_ImageJ/tree/6e3be3164bd277a24f35d79514d81cfc9ced057b/pCaslBruker-java8_)
 - unzip it and copy the folders of your choice into the ImageJ/plugins folder.
 - start ImageJ (or 'Help' -> 'Refresh menus' if ImageJ alread open).
 
